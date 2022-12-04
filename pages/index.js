@@ -1,6 +1,8 @@
 import Head from "next/head";
+import Image from "next/image";
+import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
 import { BsMoonStars } from 'react-icons/bs';
-
+import sufian from "../public/sufian.jpg";
 
 export default function Home() {
   return (
@@ -22,9 +24,18 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div>
-            <h2>Abu Sufian</h2>
-            <h3>Web developer in React</h3>
+          <div className="text-center p-10">
+            <h2 className="text-5xl py-2 text-teal-600 font-medium">Abu Sufian</h2>
+            <h3 className="text-xl py-2">Web developer in React.</h3>
+            <p className="text-md py-5 leading-8 text-gray-800">I am a web developer focused on React. If need react website join me down below and let's get cracking!</p>
+          </div>
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+            <AiFillLinkedin />
+            <AiFillGithub />
+            <AiFillTwitterCircle />
+          </div>
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden border-4 border-cyan-600">
+            <Image src={sufian} alt="sufian" objectFit="cover" />
           </div>
         </section>
       </main>
